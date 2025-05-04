@@ -29,14 +29,34 @@
     </header>
 
     <main>
-        <img src = "../../images/Toothpaste.png" alt = "garden" class = "garden-img">
-        <div class = "form">
-            <div class = "title-container">
-                <h2><strong>My New Swap</strong></h2>
-                <button class ="edit-title">
-                    <img src= "../../images/edit.png" alt = "Edit" class = "edit-icon">
-                </button>
+        <div class="image-upload-box" style="border: 2px solid #ccc; padding: 150px; border-radius: 16px; display: inline-block;">
+            <div class="image-upload">
+                <label for="image-input" class="image-label">
+                    <img id="preview-image" src="../../images/placeholder.png" alt="Put your image here" class="garden-img">
+                </label>
+                <input type="file" id="image-input" accept="image/*" style="display: none;">
             </div>
+        </div>
+        <script>
+            const imageInput = document.getElementById('image-input');
+            const previewImage = document.getElementById('preview-image');
+
+            imageInput.addEventListener('change', function(event) {
+                const file = event.target.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        previewImage.src = e.target.result;
+                    }
+                    reader.readAsDataURL(file);
+                }
+            });
+        </script>
+        <div class = "form">
+            <section class = "input-box name-box">
+                <p><strong>Item Name</strong></p>
+                <input type = "Item Name" placeholder = "Item Name here" required>
+            </section>
 
             <section class = "input-box description-box">
                 <p><strong>Description</strong></p>

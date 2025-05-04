@@ -396,3 +396,54 @@ footer a:hover {
         padding: 3rem 20%;
     }
 }
+
+.garden-buttons {
+    margin: 20px 0;
+}
+
+.join-garden {
+    background-color: #2d6a3f;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.join-garden:hover {
+    background-color: #45a049;
+}
+
+.post-join-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.unjoin-garden {
+    background-color: #d7463c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.unjoin-garden:hover {
+    background-color: #cd6161;
+}
+
+.view-garden {
+    background-color: #2d6a3f;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.view-garden:hover {
+    background-color: #45a049;
+}
