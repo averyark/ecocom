@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Favourites</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="/src/frontend/css/header.css">
+  <link rel="stylesheet" href="/src/frontend/css/footer.css">
+  <link rel="stylesheet" href="/src/frontend/css/common.css">
+  <link href='https://fonts.googleapis.com/css?family=Source Sans Pro' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- Load the component loader script -->
+  <script src="/src/frontend/components/component-loader.js" defer></script>
+  <script src="index.js" defer></script>
+</head>
+
+<body>
+  <!-- Header will be loaded here -->
+  <div id="header-container"></div>
+
+  <!-- Page content -->
+  <main class="content">
+    <h1>My Favourites</h1>
+
+    <!-- Tabs for different states -->
+    <div class="tabs-container">
+      <button class="tab-btn active" data-tab="active">Active Items</button>
+      <button class="tab-btn" data-tab="expired">Expired Items</button>
+    </div>
+
+    <!-- Active Items Tab Content -->
+    <div class="tab-content active" id="active-tab">
+      <div class="items-grid" id="active-items-grid">
+        <!-- This will be populated with the user's favorited items from the backend -->
+        <div class="loading-items">Loading your favourites...</div>
+      </div>
+    </div>
+
+    <!-- Expired Items Tab Content -->
+    <div class="tab-content" id="expired-tab">
+      <div class="items-grid" id="expired-items-grid">
+        <!-- This will be populated with the user's expired items from the backend -->
+        <div class="loading-items">Loading expired items...</div>
+      </div>
+    </div>
+
+    <!-- No Items Message (initially hidden) -->
+    <div class="no-items-message hidden" id="no-active-items">
+      <p>You don't have any favourite items.</p>
+      <p>Browse items and click the FAVOURITE button to add them here.</p>
+      <a href="/src/frontend/components/swaps/index.html" class="browse-btn">Browse Items</a>
+    </div>
+
+    <div class="no-items-message hidden" id="no-expired-items">
+      <p>You don't have any expired items.</p>
+    </div>
+  </main>
+
+  <!-- Footer will be loaded here -->
+  <div id="footer-container"></div>
+</body>
+
+</html>

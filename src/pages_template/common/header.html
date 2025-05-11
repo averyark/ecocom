@@ -1,0 +1,98 @@
+<div class="header-shipping-notice">
+    Free shipping for all orders above 50 MYR!
+</div>
+
+<!-- Sidebar Navigation -->
+<div id="mySidebar" class="header-sidebar">
+    <a href="javascript:void(0)" class="closebtn">&times;</a>
+    <a href="/src/frontend/index.html">Home</a>
+    <a href="/src/frontend/components/recycling/index.html">Recycling</a>
+    <a href="/src/frontend/components/blogs_all/index.html">All Blogs</a>
+    <!-- <button class="community_gardening">Community Gardening
+        <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="gardening-container">
+        <a href="#">All Community Gardening</a>
+        <a href="#">My Garden</a>
+    </div>
+
+    <button class="swap">Eco-friendly Product Swap
+        <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="swap-container">
+        <a href="#">All Swaps</a>
+        <a href="#">My Swaps</a>
+    </div> -->
+    <a href="/src/frontend/components/community/index.html">Gardening</a>
+    <a href="/src/frontend/components/swaps/index.html">Swaps</a>
+</div>
+</div>
+
+
+<header class="header-sticky-navbar">
+    <div class="header-navbar">
+        <div class="header-navbar-left">
+            <img src="/src/frontend/images/burgerMenu.png" alt="Menu Icon" class="icon" id="menuBtn">
+        </div>
+
+        <div class="header-logo">
+            <a href="/src/frontend/index.html">
+                <img src="/src/frontend/images/Ellipse 1.svg" alt="Logo" class="header-logo-icon">
+                <span class="header-logo-text"> ECOCOM</span>
+            </a>
+        </div>
+
+        <div class="header-navbar-right">
+            <div class="header-notification-container">
+                <div class="notification-icon-wrapper">
+                    <img src="/src/frontend/images/notification.svg" alt="Notification Icon"
+                        style="width: 30px; height: 30px; position: relative; top: -1px;" class="icon" id="notificationBtn">
+                    <!-- PHP will render the actual count here -->
+                    <span class="notification-badge" id="notificationBadge">0</span>
+                </div>
+                <div class="header-notification-dropdown" id="notificationDropdown">
+                    <div class="notification-header">
+                        <h3>Notifications</h3>
+                    </div>
+                    <div class="notification-list" id="notificationList">
+                        <!-- PHP will render notifications here -->
+                        <!-- Example notification item for swap request -->
+                        <div class="notification-item" data-id="1" data-type="swap_request">
+                            <div class="notification-content">
+                                <p><strong>John Doe</strong> wants to swap <strong>Bamboo Toothbrush</strong> for your <strong>Toothpaste Tablets</strong></p>
+                                <span class="notification-time">2 hours ago</span>
+                            </div>
+                            <div class="notification-actions">
+                                <button class="accept-btn" data-id="1">Yes</button>
+                                <button class="reject-btn" data-id="1">No</button>
+                            </div>
+                        </div>
+                        <!-- Example notification item for garden exchange -->
+                        <div class="notification-item" data-id="2" data-type="garden_exchange">
+                            <div class="notification-content">
+                                <p><strong>Jane Smith</strong> wants to exchange for your <strong>Homegrown Cucumbers</strong></p>
+                                <span class="notification-time">3 hours ago</span>
+                            </div>
+                            <div class="notification-actions">
+                                <button class="accept-btn" data-id="2">Yes</button>
+                                <button class="reject-btn" data-id="2">No</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="notification-empty hidden">
+                        <p>No new notifications</p>
+                    </div>
+                </div>
+            </div>
+            <div class="header-profile-container">
+                <img src="/src/frontend/images/profile.png" alt="Person Icon" class="icon" id="profileBtn">
+                <div class="header-profile-dropdown" id="profileDropdown">
+                    <a href="/src/frontend/components/profile/index.html">My Profile</a>
+                    <a href="/src/frontend/components/calendar/index.html">Calendar</a>
+                    <a href="/src/frontend/components/favourite/index.html">Favourite</a>
+                    <a href="#">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

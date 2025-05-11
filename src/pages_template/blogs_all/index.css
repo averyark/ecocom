@@ -1,0 +1,193 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Top Notification Banner */
+.top-banner {
+position: sticky;
+top: 0;
+z-index: 500; /* Behind navbar */
+height: 60px;
+background-color: #3A7347;
+color: white;
+display: flex;
+align-items: center;
+justify-content: center;
+font-weight: bold;
+}
+
+/* Navigation Bar */
+.nav-bar {
+position: sticky;
+top: 0;
+z-index: 1000; /* In front of banner */
+background: white;
+height: 100px;
+box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+transition: all 0.3s ease;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 0 20px;
+}
+
+/* Left and Right Sections */
+.nav-left, .nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Center Logo */
+.nav-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Logo Icon */
+.logo-icon {
+  width: 30px;
+  height: 30px;
+}
+
+/* Logo Text */
+.logo-text {
+  font-size: 25px;
+  font-weight: bold;
+  color: black;
+}
+
+/* Icons */
+.icon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  object-fit: contain;
+}
+
+.calender-btn {
+  color: #000000;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    padding: 20px;
+    margin: 10px;
+    max-width: fit-content;
+    padding-left: 10px;
+    place-self: center;
+    max-width: 1200px;
+}
+
+.card {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: left;
+    /* padding: 10px; */
+    max-width: fit-content;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card-content {
+    display: flex;
+    padding: 10px 20px 20px 20px;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+
+
+@media (max-width: 768px) {
+    .card-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+.card-title {
+  color: #000;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: black;
+  line-height: normal;
+}
+
+.card-date {
+  color: #A7A7A7;
+}
+
+.card-date-real {
+  color: #222222;
+}
+
+.card-location {
+  color: #A7A7A7;
+}
+
+.site-footer {
+    background-color: #3A7347;
+    color: #ffffff;
+    padding: 60px 20px 30px;
+    font-size: 18px;
+    margin-top: 60px;
+  }
+
+  .footer-columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 60px;
+    margin-bottom: 30px;
+  }
+
+  .footer-col h4 {
+    font-weight: bold;
+    margin-bottom: 12px;
+  }
+
+  .footer-col ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .footer-col ul li {
+    margin-bottom: 8px;
+  }
+
+  .footer-col ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 400;
+  }
+
+  .footer-col ul li a:hover {
+    text-decoration: underline;
+  }
+
+  footer hr {
+    border: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+    margin: 30px 0;
+  }
+
+  .footer-bottom {
+    text-align: center;
+    font-size: 13px;
+    opacity: 0.8;
+  }

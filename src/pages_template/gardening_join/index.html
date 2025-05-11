@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gardening With You</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="/src/frontend/css/header.css">
+    <link rel="stylesheet" href="/src/frontend/css/footer.css">
+    <link rel="stylesheet" href="/src/frontend/css/common.css">
+    <link href='https://fonts.googleapis.com/css?family=Source Sans Pro' rel='stylesheet'>
+    <!-- Load the component loader script -->
+    <script src="/src/frontend/components/component-loader.js" defer></script>
+    <script src="./index.js" defer></script>
+</head>
+
+<body>
+    <!-- Header will be loaded here -->
+    <div id="header-container"></div>
+
+    <main>
+        <img src="/src/frontend/images/garden.png" alt="garden" class="garden-img">
+        </div>
+
+
+        <!-- Gardening Info -->
+        <div class="gardening-info">
+            <h1>Gardening in Pavilion</h1>
+            <p class="author">by <span>Darren Tong</span></p>
+
+            <!-- Venue & Time Box -->
+            <div class="box venue">
+                <strong>Venue & Time</strong>
+                <ul>
+                    <p>Jalan Teknologi 5, Taman Teknologi Malaysia, Kuala Lumpur</p>
+                    <p>Every Wednesday, 7.00 a.m. - 9.00 a.m.</p>
+                </ul>
+            </div>
+
+
+            <!-- Venue & Time Box -->
+            <div class="box description">
+                <strong>Description</strong>
+                <ul>
+                    <p>
+                        Join our vibrant community garden where neighbors come together to grow fresh, organic produce
+                        while sharing knowledge, tools, and friendship.
+                        Whether you're an experienced gardener or just starting out, there’s a plot for everyone.
+                        Let’s cultivate not only plants but also a greener, healthier community.
+                    </p>
+                </ul>
+            </div>
+            <div class="garden-buttons">
+                <button class="button button-primary join-garden" id="joinButton">Join Gardening</button>
+                <div class="post-join-buttons" id="postJoinButtons" style="display: none;">
+                    <a href="/src/frontend/components/gardening/index.html" style="text-decoration: none;display:flex;flex-grow:1;">
+                        <button class="button button-primary view-garden">
+                            View Garden
+                        </button>
+                    </a>
+                    <button class="button unjoin-garden">Unjoin Garden</button>
+                </div>
+            </div>
+    </main>
+
+    <!-- Footer will be loaded here -->
+    <div id="footer-container"></div>
+
+    <script>
+        document.getElementById('joinButton').addEventListener('click', function () {
+            // Hide the join button
+            this.style.display = 'none';
+
+            // Show the unjoin and view garden buttons
+            document.getElementById('postJoinButtons').style.display = 'flex';
+        });
+
+        // You might want to add functionality for the unjoin button to reverse this process
+        document.querySelector('.unjoin-garden').addEventListener('click', function () {
+            document.getElementById('joinButton').style.display = 'block';
+            document.getElementById('postJoinButtons').style.display = 'none';
+        });
+    </script>
+</body>
+
+</html>

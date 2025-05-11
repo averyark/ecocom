@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Swaps Inspect</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="/src/frontend/css/header.css">
+  <link rel="stylesheet" href="/src/frontend/css/footer.css">
+  <link rel="stylesheet" href="/src/frontend/css/common.css">
+  <link href='https://fonts.googleapis.com/css?family=Source Sans Pro' rel='stylesheet'>
+  <!-- Load the component loader script -->
+  <script src="/src/frontend/components/component-loader.js" defer></script>
+  <script src="./index.js" defer></script>
+</head>
+
+<body>
+  <!-- Header will be loaded here -->
+  <div id="header-container"></div>
+
+  <div class="product-detail-container">
+    <!-- Product Image -->
+    <div class="product-image">
+      <img src="/src/frontend/images/Toothpaste.png" alt="Toothpaste Tablets" />
+    </div>
+
+    <!-- Product Info -->
+    <div class="product-info">
+      <div class="title-container">
+        <h1>Toothpaste Tablets w/ Fluoride - Mint</h1>
+        <button class="edit-title" onclick="window.location.href = '/src/frontend/components/swaps_create/index.html?id=xxx'">
+          <img src="/src/frontend/images/edit.png" alt="Edit" class="edit-icon">
+        </button>
+      </div>
+      <p class="author">by <span>Andre Lau</span></p>
+
+      <ul class="product-description">
+        <li>Zero-Waste & Plastic-Free – Say goodbye to toothpaste tubes! Comes in a compostable pouch.</li>
+        <li>Fluoride Protection – Strengthens enamel and fights cavities.</li>
+        <li>Simple & Travel-Friendly – Compact, mess-free, and TSA-approved.</li>
+        <li>Made in Europe – High-quality, natural ingredients for a sustainable smile.</li>
+      </ul>
+
+      <p class="net-weight">Net Wt: 1.4 oz (~125 tablets) – 2-month supply</p>
+
+      <!-- Wishlist Box -->
+      <div class="box wishlist">
+        <strong>Lau’s wishlist</strong>
+        <ul>
+          <li>Bamboo Toothbrush</li>
+          <li>Shampoo or Conditioner Bars</li>
+          <li>Reusable Cotton Rounds</li>
+          <li>Compostable Floss</li>
+        </ul>
+      </div>
+
+      <!-- User Notes Box -->
+      <div class="box notes">
+        <strong>User notes</strong>
+        <p>Would love to swap out for another eco-friendly neccesity, let me know if you want to swap.</p>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="action-buttons">
+        <button class="fav-btn" id="favorite-btn">FAVOURITE</button>
+        <button class="swap-btn">REQUEST SWAP</button>
+      </div>
+      <!-- <div class="action-buttons">
+        <button class="swap-btn">REMOVE ITEM</button>
+      </div> -->
+    </div>
+  </div>
+
+  <!-- Swap Request Modal -->
+  <div id="swap-request-modal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Select Item to Swap</h3>
+        <span class="close-modal">&times;</span>
+      </div>
+      <div class="modal-body">
+        <form id="swap-request-form" action="/src/backend/swaps/request_swap.php" method="post">
+          <div class="form-group">
+            <p>Please select one of your items to swap with this item:</p>
+            <div class="items-grid" id="user-items-grid">
+              <!-- This will be populated with the user's items from the backend -->
+              <div class="loading-items">Loading your items...</div>
+            </div>
+            <p class="form-note">Only items you've created will appear here. <a href="/src/frontend/components/swaps_create/index.html">Create a new item</a> if you don't have any to swap.</p>
+          </div>
+          <input type="hidden" name="swap_item_id" id="selected-item-id" value="">
+          <input type="hidden" name="requested_item_id" value="xxx">
+          <div class="form-actions">
+            <button type="button" id="cancel-swap-btn" class="btn-secondary">Cancel</button>
+            <button type="submit" id="confirm-swap-btn" class="btn-primary" disabled>Confirm Swap</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer will be loaded here -->
+  <div id="footer-container"></div>
+
+</body>
+
+</html>

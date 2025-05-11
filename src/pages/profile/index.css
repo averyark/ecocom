@@ -1,0 +1,110 @@
+/* Profile Page Styles */
+.profile-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+}
+
+.profile-title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.profile-section {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.profile-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #eee;
+  color: #2d6a3f;
+}
+
+.profile-form-container {
+  margin-bottom: 2rem;
+}
+
+.profile-form-container h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #444;
+}
+
+.profile-form {
+  max-width: 500px;
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #555;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #2d6a3f;
+  box-shadow: 0 0 0 2px rgba(45, 106, 63, 0.2);
+}
+
+.form-group input[readonly] {
+  background-color: #f5f5f5;
+  cursor: not-allowed;
+}
+
+.error-message {
+  color: #d32f2f;
+  font-size: 0.85rem;
+  margin-top: 0.3rem;
+  min-height: 1.2rem;
+}
+
+.password-hint {
+  color: #666;
+  font-size: 0.8rem;
+  margin-top: 0.3rem;
+  font-style: italic;
+}
+
+.success-message {
+  color: #2d6a3f;
+  font-size: 0.9rem;
+  margin-top: 0.8rem;
+  font-weight: 600;
+  min-height: 1.2rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .profile-container {
+    padding: 1rem;
+  }
+
+  .profile-section {
+    padding: 1rem;
+  }
+
+  .profile-form {
+    max-width: 100%;
+  }
+}

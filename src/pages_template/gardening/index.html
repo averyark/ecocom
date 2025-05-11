@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gardening Community</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="/src/frontend/css/header.css">
+  <link rel="stylesheet" href="/src/frontend/css/footer.css">
+  <link rel="stylesheet" href="/src/frontend/css/common.css">
+  <link href='https://fonts.googleapis.com/css?family=Source Sans Pro' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- Load the component loader script -->
+  <script src="/src/frontend/components/component-loader.js" defer></script>
+  <script src="index.js" defer></script>
+</head>
+
+<body>
+  <!-- Header will be loaded here -->
+  <div id="header-container"></div>
+
+  <!-- Page content -->
+  <main class="content">
+    <div class="gardening-container">
+      <!-- Post Creation Section -->
+      <div class="post-creation-card">
+        <div class="post-header">
+          <h2>Share with the Community</h2>
+        </div>
+        <div class="post-input-container">
+          <textarea id="post-content" placeholder="Write your garden tips or post your home grown produce..."></textarea>
+          <div id="post-image-preview-container" class="post-image-preview hidden">
+            <img id="post-image-preview" src="#" alt="Image Preview">
+            <button type="button" id="remove-post-image-btn" class="remove-btn">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+          <div class="post-options">
+            <div class="post-attachments">
+              <button class="attachment-btn" id="photo-btn">
+                <i class="fas fa-image"></i> Photo
+              </button>
+              <input type="file" id="post-image-input" accept="image/*" style="display: none;">
+              <div class="exchangeable-checkbox">
+                <input type="checkbox" id="exchangeable-check">
+                <label for="exchangeable-check">Mark as home grown produce</label>
+              </div>
+            </div>
+            <button class="button button-primary" id="post-btn">Share</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feed Section -->
+      <div class="feed-container">
+        <h3>Community Garden Feed</h3>
+
+        <!-- Sample Post 1 -->
+        <div class="post-card">
+          <div class="post-header">
+            <div class="post-user-info">
+              <img src="/src/frontend/images/profile-placeholder.png" alt="User Profile" class="user-avatar">
+              <div class="post-user-details">
+                <h4>Jane Smith</h4>
+                <p class="post-time">2 hours ago</p>
+              </div>
+            </div>
+            <div class="post-actions-top">
+              <button class="action-btn-top exchange-btn" title="Request Exchange">
+                <i class="fas fa-exchange-alt"></i>
+              </button>
+              <button class="action-btn-top edit-btn" title="Edit Post">
+                <i class="fas fa-edit"></i>
+              </button>
+              <button class="action-btn-top delete-btn" title="Delete Post">
+                <i class="fas fa-trash"></i>
+              </button>
+            </div>
+          </div>
+          <div class="post-content">
+            <p>Just harvested my first batch of organic tomatoes! Here's a tip: water your tomato plants at the base, not the leaves, to prevent fungal diseases.</p>
+            <img src="/src/frontend/images/garden.png" alt="Tomato harvest" class="post-image">
+          </div>
+          <div class="exchangeable-tag">
+            <i class="fas fa-exchange-alt"></i> Exchangeable
+          </div>
+        </div>
+
+        <!-- Sample Post 2 -->
+        <div class="post-card">
+          <div class="post-header">
+            <div class="post-user-info">
+              <img src="/src/frontend/images/profile-placeholder.png" alt="User Profile" class="user-avatar">
+              <div class="post-user-details">
+                <h4>Michael Chen</h4>
+                <p class="post-time">Yesterday</p>
+              </div>
+            </div>
+            <div class="post-actions-top">
+              <button class="action-btn-top exchange-btn" title="Request Exchange">
+                <i class="fas fa-exchange-alt"></i>
+              </button>
+              <button class="action-btn-top edit-btn" title="Edit Post">
+                <i class="fas fa-edit"></i>
+              </button>
+              <button class="action-btn-top delete-btn" title="Delete Post">
+                <i class="fas fa-trash"></i>
+              </button>
+            </div>
+          </div>
+          <div class="post-content">
+            <p>My herb garden is thriving! Pro tip: Harvest herbs in the morning when their essential oils are at their peak. I have extra mint and rosemary if anyone wants to exchange.</p>
+          </div>
+          <div class="exchangeable-tag">
+            <i class="fas fa-exchange-alt"></i> Exchangeable
+          </div>
+        </div>
+
+        <!-- Sample Post 3 -->
+        <div class="post-card">
+          <div class="post-header">
+            <div class="post-user-info">
+              <img src="/src/frontend/images/profile-placeholder.png" alt="User Profile" class="user-avatar">
+              <div class="post-user-details">
+                <h4>Sarah Johnson</h4>
+                <p class="post-time">3 days ago</p>
+              </div>
+            </div>
+            <div class="post-actions-top">
+              <button class="action-btn-top exchange-btn" title="Request Exchange">
+                <i class="fas fa-exchange-alt"></i>
+              </button>
+              <button class="action-btn-top edit-btn" title="Edit Post">
+                <i class="fas fa-edit"></i>
+              </button>
+              <button class="action-btn-top delete-btn" title="Delete Post">
+                <i class="fas fa-trash"></i>
+              </button>
+            </div>
+          </div>
+          <div class="post-content">
+            <p>Looking to exchange some of my homegrown cucumbers for other vegetables. They're organic and freshly picked!</p>
+            <img src="/src/frontend/images/image (2).png" alt="Cucumbers" class="post-image">
+          </div>
+          <div class="exchangeable-tag">
+            <i class="fas fa-exchange-alt"></i> Exchangeable
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer will be loaded here -->
+  <div id="footer-container"></div>
+
+  <!-- Exchange Request Modal -->
+  <div id="exchange-modal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Request Exchange</h3>
+        <span class="close-modal">&times;</span>
+      </div>
+      <div class="modal-body">
+        <form id="exchange-form">
+          <div class="form-group">
+            <label for="exchange-message">Message</label>
+            <textarea id="exchange-message" placeholder="Describe what you'd like to exchange and any other details..."></textarea>
+          </div>
+          <div class="form-group">
+            <label for="exchange-image">Upload Image (Optional)</label>
+            <div class="image-upload-container">
+              <input type="file" id="exchange-image" accept="image/*">
+              <div id="image-preview-container" class="hidden">
+                <img id="exchange-image-preview" src="#" alt="Preview">
+                <button type="button" id="remove-image-btn" class="remove-btn">
+                  <i class="fas fa-times"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button type="button" class="button" id="cancel-exchange-btn">Cancel</button>
+            <button type="submit" class="button button-primary" id="submit-exchange-btn">Submit Request</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

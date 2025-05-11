@@ -1,0 +1,97 @@
+/* Main Layout */
+.recycling-detail-container {
+  display: flex;
+  gap: 40px;
+  max-width: 1100px;
+  margin: 75px auto 0 auto;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+/* Product Image */
+.recycling-image img {
+  width: 500px;
+  object-fit: contain;
+}
+
+/* recycling Info */
+.recycling-info {
+  flex: 1;
+}
+
+/* Text Styles */
+h1 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.author {
+  font-size: 14px;
+  color: #999;
+  margin-bottom: 20px;
+}
+
+.author span {
+  color: #3A7347;
+  font-weight: 600;
+}
+
+.recycling-description {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+
+/* Boxes */
+.box {
+  background-color: #f5f5f5;
+  padding: 16px 20px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.box strong {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+/* Action Buttons */
+.action-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .recycling-detail-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .recycling-image img {
+    width: 80%;
+    max-width: 300px;
+  }
+
+  .recycling-info {
+    width: 100%;
+    text-align: center;
+  }
+
+  .recycling-description,
+  .box ul,
+  .notes li {
+    text-align: left;
+  }
+
+  .action-buttons {
+    justify-content: center;
+    margin-top: 20px;
+  }
+}
