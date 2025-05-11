@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Calendar</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="/src/frontend/css/header.css">
+  <link rel="stylesheet" href="/src/frontend/css/footer.css">
+  <link rel="stylesheet" href="/src/frontend/css/common.css">
+  <link href='https://fonts.googleapis.com/css?family=Source Sans Pro' rel='stylesheet'>
+
+  <!-- FullCalendar Core CSS -->
+  <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css' rel='stylesheet' />
+
+  <!-- FullCalendar JS -->
+  <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js'></script>
+
+  <!-- Load the component loader script -->
+  <script src="/src/frontend/components/component-loader.js" defer></script>
+  <script src="index.js" defer></script>
+</head>
+
+<body>
+  <!-- Header will be loaded here -->
+  <div id="header-container"></div>
+
+  <!-- Page content -->
+  <main class="content">
+    <h1>Community Events Calendar</h1>
+    <p>View all upcoming recycling programs, gardening events, and community activities.</p>
+
+    <!-- Calendar container -->
+    <div id="calendar-container">
+      <div id="calendar"></div>
+    </div>
+
+    <!-- Legend for event types -->
+    <div class="calendar-legend">
+      <div class="legend-item">
+        <span class="legend-color gardening"></span>
+        <span class="legend-text">Gardening Events</span>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer will be loaded here -->
+  <div id="footer-container"></div>
+</body>
+
+</html>

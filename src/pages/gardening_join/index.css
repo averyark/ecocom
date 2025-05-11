@@ -1,0 +1,281 @@
+body {
+    background-color: rgb(255, 255, 255);
+    color: #333;
+    line-height: 1.6;
+}
+
+main {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 1rem;
+    position: relative;
+    margin-top: 1.5rem;
+    padding: 2rem 1%;
+    padding-bottom: 8rem;
+}
+
+.garden-img {
+    width: 45%;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin-right: 10px;
+    border-radius: 4px;
+}
+
+/* recycling Info */
+.gardening-info {
+    flex: 1;
+}
+
+/* Text Styles */
+h1 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.author {
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 20px;
+}
+
+.author span {
+    color: #3A7347;
+    font-weight: 600;
+}
+
+/* Boxes */
+.box {
+    background-color: #f5f5f5;
+    padding: 16px 20px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.box strong {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.error-message {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 10px 15px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.success-message {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 10px 15px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.error-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 6px;
+    margin: 20px 0;
+}
+
+
+.join-garden {
+    background-color: #2d6a3f;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    position: static;
+    display: block;
+    margin: 20px auto 0;
+    width: 100%;
+    max-width: 200px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.create-garden:hover {
+    background-color: #45a049;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 16px;
+    margin-top: auto;
+    margin-bottom: 0;
+}
+
+@media (min-width: 992px) {
+    main {
+        flex-direction: row;
+    }
+
+    main img {
+        width: 50%;
+    }
+
+    .form {
+        width: 50%;
+    }
+}
+
+@media (min-width: 768px) {
+    main {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 3rem;
+        padding: 2rem 5%;
+    }
+
+    .garden-img {
+        width: 50%;
+        max-width: 700px;
+    }
+
+    .form {
+        width: 50%;
+        padding-top: 0;
+    }
+
+    .create-garden {
+        width: auto;
+    }
+
+    .action-buttons {
+        justify-content: center;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        padding: 0.5rem 3%;
+        margin-top: 1rem;
+    }
+
+    .garden-img {
+        width: 90%;
+        max-height: 300px;
+        object-position: center;
+        border-radius: 6px;
+        margin: 1rem;
+    }
+
+    .form {
+        width: 90%;
+        padding: 0 0.5rem;
+    }
+
+    .title-container {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.3rem;
+        margin-bottom: 1rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+        line-height: 1.3;
+    }
+
+    .input-box p {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .input-box input {
+        padding: 0.8rem;
+        font-size: 0.9rem;
+        width: 100%;
+    }
+
+
+    .description-box input {
+        min-height: 100px;
+    }
+
+    .create-garden {
+        width: 100%;
+        padding: 0.8rem;
+        font-size: 1rem;
+        margin-top: 1rem;
+        margin-bottom: 5rem;
+    }
+}
+
+@media (min-width: 992px) {
+    main {
+        padding: 3rem 10%;
+    }
+
+    .garden-buttons {
+        margin: 20px 0;
+    }
+
+    .join-garden {
+        background-color: #2d6a3f;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    .join-garden:hover {
+        background-color: #45a049;
+    }
+
+    .post-join-buttons {
+        display: flex;
+        gap: 10px;
+    }
+
+    .post-join-buttons form {
+        flex-grow: 0;
+        margin: 0;
+    }
+
+    .unjoin-garden {
+        background-color: #d7463c;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    .unjoin-garden:hover {
+        background-color: #cd6161;
+    }
+
+    .view-garden {
+        background-color: #2d6a3f;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        flex-grow: 1;
+    }
+
+    .view-garden:hover {
+        background-color: #45a049;
+    }
+}

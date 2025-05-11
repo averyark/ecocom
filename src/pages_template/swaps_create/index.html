@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Swap</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="/src/frontend/css/header.css">
+    <link rel="stylesheet" href="/src/frontend/css/footer.css">
+    <link rel="stylesheet" href="/src/frontend/css/common.css">
+    <link href='https://fonts.googleapis.com/css?family=Source Sans Pro' rel='stylesheet'>
+    <!-- Load the component loader script -->
+    <script src="/src/frontend/components/component-loader.js" defer></script>
+    <script src="./index.js" defer></script>
+</head>
+
+<body>
+    <!-- Header will be loaded here -->
+    <div id="header-container"></div>
+
+    <form action="/src/backend/swaps/create_swap.php" method="post">
+    <main>
+            <div class="image-upload-box"
+                style="border: 2px solid #ccc; padding: 150px; border-radius: 16px; display: inline-block;">
+                <div class="image-upload">
+                    <label for="image-input" class="image-label">
+                        <img id="preview-image" src="/src/frontend/images/placeholder.png" alt="Put your image here"
+                            class="garden-img">
+                    </label>
+                    <input type="file" id="image-input" accept="image/*" style="display: none;">
+                </div>
+            </div>
+            <div class="form">
+                <section class="input-box name-box">
+                    <p><strong>Item Name</strong></p>
+                    <input type="Item Name" placeholder="Item Name here" required>
+                </section>
+                <section class="input-box description-box">
+                    <p><strong>Description</strong></p>
+                    <input type="Description" placeholder="Description here" required>
+                </section>
+
+                <section class="input-box wishlist-box">
+                    <p><strong>My Wishlist</strong></p>
+                    <input type="Wishlist" placeholder="Wishlist here" required>
+                </section>
+                <section class="input-box usernotes-box">
+                    <p><strong>User Notes</strong></p>
+                    <input type="User Notes" placeholder="User Notes Here" required>
+                </section>
+                <section class="input-box usernotes-box">
+                    <p><strong>Genre</strong></p>
+                    <select name="category" id="category" required>
+                        <option value="Home & Kitchen">Home & Kitchen</option>
+                        <option value="Cleaning">Cleaning</option>
+                        <option value="Bathroom">Bathroom</option>
+                        <option value="Beauty">Beauty</option>
+                        <option value="Baby & Kids">Baby & Kids</option>
+                        <option value="Pets">Pets</option>
+                    </select>
+                </section>
+                <button type="submit" class="button button-primary create-swap">Create Swap</button>
+            </div>
+        </main>
+    </form>
+
+    <!-- Footer will be loaded here -->
+    <div id="footer-container"></div>
+</body>
+
+</html>

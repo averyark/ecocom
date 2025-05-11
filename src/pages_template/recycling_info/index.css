@@ -1,0 +1,104 @@
+  /* Top Notification Banner */
+  .top-banner {
+    position: sticky;
+    top: 0;
+    z-index: 500;
+    height: 60px;
+    background-color: #3A7347;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+  }
+
+  /* Main Layout */
+  .recycling-detail-container {
+    display: flex;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 75px auto 0 auto;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+
+  /* Product Image */
+  .recycling-image img {
+    width: 500px;
+    object-fit: contain;
+  }
+
+  /* recycling Info */
+  .recycling-info {
+    flex: 1;
+  }
+
+  /* Text Styles */
+  h1 {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+  .author {
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 20px;
+  }
+
+  .author span {
+    color: #3A7347;
+    font-weight: 600;
+  }
+
+  .recycling-description {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+
+
+  /* Boxes */
+  .box {
+    background-color: #f5f5f5;
+    padding: 16px 20px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
+
+  .box strong {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .product-detail-container {
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .product-image img {
+      width: 80%;
+      max-width: 300px;
+    }
+
+    .product-info {
+      width: 100%;
+      text-align: center;
+    }
+
+    .product-description,
+    .wishlist ul,
+    .notes p {
+      text-align: left;
+    }
+
+    .action-buttons {
+      justify-content: center;
+      margin-top: 20px;
+    }
+  }
